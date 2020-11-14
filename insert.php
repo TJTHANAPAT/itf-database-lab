@@ -24,7 +24,7 @@ $sql = "INSERT INTO guestbook (Name , Comment , Link) VALUES ('$name', '$comment
 if (mysqli_query($conn, $sql)) {
     echo '<div class="container-message-box text-center">
             <span class="icon">✓</span>
-            <h4 style="color:#fff">Comment has been added into database successfully.</h4>
+            <h4 style="color:#fff">Comment has been saved into database successfully.</h4>
             <a role="button" class="btn btn-outline-orange mt-3" href="guestbook.php">Home</a>
          </div>';
 } else {
