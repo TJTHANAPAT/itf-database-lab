@@ -55,7 +55,7 @@ mysqli_close($conn);
 ?>
     </table>
     <div class="text-center">
-        <a href="insert_form.html" class="btn btn-primary">Insert</a>
+        <a href="insert_form.php" class="btn btn-primary">Insert</a>
     </div>
 </div>
 </body>

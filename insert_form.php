@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <h1>Insert new comment</h1>
-        <form action="insert.php" method="post">
+        <form action="insert.php" method="post" class="mt-4">
             <div class="form-group">
                 <label for="inputName">Name</label>
                 <input type="text" name="name" class="form-control" placeholder="Enter Name">
@@ -23,7 +23,10 @@
                 <label for="inputLink">Link</label>
                 <input type="text" name="link" class="form-control" placeholder="Enter Link">
             </div>
-            <button type="submit" class="btn btn-primary mt-2">Submit</button>
+            <div class="mt-4">
+                <button type="submit" class="btn btn-primary mr-1">Submit</button>
+                <a role="button" class="btn btn-secondary" href="show.php">Back</a>
+            </div>
         </form>
     </div>
 </body>
