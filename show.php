@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ITF Lab</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <?php
@@ -15,39 +17,46 @@ if (!$conn)
 }
 $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 ?>
-<table width="600" border="1">
-    <tr>
-        <th width="100"> <div align="center">ID</div></th>
-        <th width="100"> <div align="center">Name</div></th>
-        <th width="350"> <div align="center">Comment </div></th>
-        <th width="150"> <div align="center">Link </div></th>
-        <th width="300"> <div align="center">Action </div></th>
-    </tr>
+<div class="container">
+    <h1>Guestbook</h1>
+    <table class="table table-responsive-md">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Comment</th>
+                <th scope="col">Link</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
 <?php
 while($row = mysqli_fetch_array($res))
 {
 ?>
-    <tr>
-        <td><?php echo $row['ID'];?></div></td>
-        <td><?php echo $row['Name'];?></div></td>
-        <td><?php echo $row['Comment'];?></td>
-        <td><?php echo $row['Link'];?></td>
-        <td>
-            <form action="delete.php" method="post">
-                <input type="hidden" name="ID" value=<?php echo $row['ID'];?>>
-                <button type="submit">Delete</button>
-            </form>
-            <form action="edit_form.php" method="post">
-                <input type="hidden" name="ID" value=<?php echo $row['ID'];?>>
-                <button type="submit">Edit</button>
-            </form>
-        </td>
-    </tr>
+        <tbody>
+            <tr>
+                <td><?php echo $row['Name'];?></div></td>
+                <td><?php echo $row['Comment'];?></td>
+                <td><?php echo $row['Link'];?></td>
+                <td>
+                    <form action="edit_form.php" method="post" class="d-inline">
+                        <input type="hidden" name="ID" value=<?php echo $row['ID'];?>>
+                        <button type="submit" class="btn btn-sm btn-primary btn-edit">Edit</button>
+                    </form>
+                    <form action="delete.php" method="post" class="d-inline">
+                        <input type="hidden" name="ID" value=<?php echo $row['ID'];?>>
+                        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        </tbody>
 <?php
 }
 mysqli_close($conn);
 ?>
-</table>
-<a href="insert_form.html">Insert</a>
+    </table>
+    <div class="text-center">
+        <a href="insert_form.html" class="btn btn-primary">Insert</a>
+    </div>
+</div>
 </body>
 </html>

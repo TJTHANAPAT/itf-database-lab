@@ -1,0 +1,14 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 768px) {
+    .btn-edit {
+        margin-bottom: 5px;
+    }
+}
+
+.container {
+    margin: 100px auto 50px;
+}
