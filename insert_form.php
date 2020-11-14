@@ -17,7 +17,7 @@
             </div>
             <div class="form-group">
                 <label for="inputComment">Comment</label>
-                <textarea class="form-control" id="inputComment" rows="3" placeholder="Enter Comment"></textarea>
+                <textarea name="comment" class="form-control" id="inputComment" rows="3" placeholder="Enter Comment"></textarea>
             </div>
             <div class="form-group">
                 <label for="inputLink">Link</label>
@@ -25,10 +25,9 @@
             </div>
             <div class="mt-4">
                 <button type="submit" class="btn btn-primary mr-1">Submit</button>
-                <a role="button" class="btn btn-secondary" href="show.php">Back</a>
+                <a role="button" class="btn btn-secondary" href="guestbook.php">Back</a>
             </div>
         </form>
     </div>
 </body>
-
 </html>
