@@ -19,7 +19,7 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 ?>
 <div class="container">
     <h1>Guestbook</h1>
-    <table class="table table-responsive-md">
+    <table class="table table-responsive-md table-hover table-dark">
         <thead>
             <tr>
                 <th scope="col">Name</th>
@@ -38,14 +38,14 @@ while($row = mysqli_fetch_array($res))
                 <td><?php echo $row['Comment'];?></td>
                 <td><?php echo $row['Link'];?></td>
                 <td>
-                    <div class="d-inline">
+                    <div>
                         <form action="edit_form.php" method="post" class="d-inline">
                             <input type="hidden" name="ID" value=<?php echo $row['ID'];?>>
-                            <button type="submit" class="btn btn-sm btn-primary mb-1">Edit</button>
+                            <button type="submit" class="btn btn-sm btn-outline-orange mb-1">Edit</button>
                         </form>
                         <form action="delete.php" method="post" class="d-inline">
                             <input type="hidden" name="ID" value=<?php echo $row['ID'];?>>
-                            <button type="submit" class="btn btn-sm btn-danger mb-1">Delete</button>
+                            <button type="submit" class="btn btn-sm btn-outline-danger mb-1">Delete</button>
                         </form>
                     </div>
                 </td>
@@ -57,8 +57,12 @@ mysqli_close($conn);
 ?>
     </table>
     <div class="text-center">
-        <a href="insert_form.php" class="btn btn-primary">Insert</a>
+        <a href="insert_form.php" class="btn btn-outline-orange">Add New Comment</a>
     </div>
+    <footer>
+        <hr>
+        <p>Created by TJTHANAPAT. This site is part of studying Information Technology Fundamentals, Academic Year of 2020, Faculty of Information Technology, KMITL.</p>
+    </footer>
 </div>
 </body>
 </html>

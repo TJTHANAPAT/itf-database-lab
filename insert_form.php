@@ -8,24 +8,24 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Insert new comment</h1>
-        <form action="insert.php" method="post" class="mt-4">
+    <div class="container-form">
+        <h1>Add New Comment</h1>
+        <form action="insert.php" method="post" class="form-dark mt-4">
             <div class="form-group">
-                <label for="inputName">Name</label>
+                <label for="inputName">NAME</label>
                 <input type="text" name="name" id="inputName" class="form-control" placeholder="Enter Name">
             </div>
             <div class="form-group">
-                <label for="inputComment">Comment</label>
+                <label for="inputComment">COMMENT</label>
                 <textarea name="comment" id="inputComment" class="form-control" rows="3" placeholder="Enter Comment"></textarea>
             </div>
             <div class="form-group">
-                <label for="inputLink">Link</label>
+                <label for="inputLink">LINK</label>
                 <input type="text" name="link" id="inputLink" class="form-control" placeholder="Enter Link">
             </div>
             <div class="mt-4">
-                <button type="submit" class="btn btn-primary mr-1">Submit</button>
-                <a role="button" class="btn btn-secondary" href="guestbook.php">Back</a>
+                <button type="submit" class="btn btn-outline-orange mr-1">Add</button>
+                <a role="button" class="btn btn-outline-secondary" href="guestbook.php">Back</a>
             </div>
         </form>
     </div>

@@ -2,7 +2,69 @@ html, body {
     margin: 0;
     padding: 0;
 }
-
+body {
+    background-color: #202020;
+}
+h1,h2,h3,h4 {
+    color: #ff7e05;
+}
+p {
+    color: #ffffff;
+}
 .container {
-    margin: 100px auto 50px;
+    padding: 15px;
+    margin: 100px auto 25px;
+}
+.container-form{
+    padding: 15px;
+    max-width: 400px;
+    margin: 100px auto 25px;
+}
+table{
+    background-color: transparent !important;
+}
+.btn-outline-orange{
+    color:#ff7e05;
+    border-color:#ff7e05;
+}
+.btn-outline-orange:hover{
+    color:#ffffff;
+    background-color:#ff7e05;
+    border-color:#ff7e05;
+}
+.btn-outline-orange.focus,.btn-outline-orange:focus{
+    box-shadow:0 0 0 .2rem rgba(255, 126, 5,.5);
+}
+.form-dark label {
+    color: #ffffff !important;
+    margin-bottom: 3px;
+}
+.form-dark input, .form-dark input:-webkit-autofill , .form-dark textarea {
+    background-color: #2b2b2b !important;
+    color: #c2c2c2 !important;
+    border-color: #2b2b2b !important;
+    border-radius: 2px !important;
+}
+.form-dark input:focus, .form-dark textarea:focus{
+    box-shadow:0 0 0 .2rem rgba(255, 126, 5,.2) !important;
+}
+.form-dark input:-webkit-autofill,
+.form-dark input:-webkit-autofill:hover, 
+.form-dark input:-webkit-autofill:focus, 
+.form-dark input:-webkit-autofill:active  {
+    -webkit-text-fill-color: #c2c2c2 !important;
+    -webkit-box-shadow: 0 0 0 30px #2b2b2b inset !important;
+    color: #c2c2c2 !important;
+}
+.form-dark input::-webkit-input-placeholder, /* Edge */
+.form-dark input:-ms-input-placeholder, /* Internet Explorer 10-11 */
+.form-dark input::placeholder { 
+    color: #a8a8a8 !important;
+}
+
+footer {
+    margin-top: 50px;
+}
+footer hr{
+    border-color: rgba(255, 255, 255, 0.2);
 }
