@@ -23,8 +23,9 @@ $link = $_POST['link'];
 $sql = "UPDATE guestbook SET Name='$name', Comment='$text', Link='$link' WHERE ID='$ID'";
 
 if (mysqli_query($conn, $sql)) {
-    echo '<div class="container">
-            <h3>Comment has been updated successfully.</h3>
+    echo '<div class="container-message-box text-center">
+            <span class="icon">✓</span>
+            <h4 style="color:#fff">Comment has been updated successfully.</h4>
             <a role="button" class="btn btn-outline-orange mt-3" href="guestbook.php">Home</a>
          </div>';
 } else {
