@@ -27,7 +27,9 @@ $comment = mysqli_fetch_array($res);
             <input type="hidden" name="ID" value=<?php echo $comment['ID'];?>>
             <div class="form-group">
                 <label for="inputName">Name</label>
-                <input type="text" name="name" class="form-control" placeholder="Enter Name" value=<?php echo $comment['Name'];?>>
+                <?php
+                    echo '<input type="text" name="name" id="inputName" class="form-control" placeholder="Enter Name" value="'.$comment["Name"].'">'
+                ?>
             </div>
             <div class="form-group">
                 <label for="inputComment">Comment</label>
@@ -35,7 +37,9 @@ $comment = mysqli_fetch_array($res);
             </div>
             <div class="form-group">
                 <label for="inputLink">Link</label>
-                <input type="text" name="link" class="form-control" placeholder="Enter Link" value=<?php echo $comment['Link'];?>>
+                <?php
+                    echo '<input type="text" name="link" id="inputLink" class="form-control" placeholder="Enter Name" value="'.$comment["Link"].'">'
+                ?>
             </div>
             <div class="mt-4">
                 <button type="submit" class="btn btn-primary mr-1">Save</button>

@@ -13,15 +13,15 @@
         <form action="insert.php" method="post" class="mt-4">
             <div class="form-group">
                 <label for="inputName">Name</label>
-                <input type="text" name="name" class="form-control" placeholder="Enter Name">
+                <input type="text" name="name" id="inputName" class="form-control" placeholder="Enter Name">
             </div>
             <div class="form-group">
                 <label for="inputComment">Comment</label>
-                <textarea name="comment" class="form-control" id="inputComment" rows="3" placeholder="Enter Comment"></textarea>
+                <textarea name="comment" id="inputComment" class="form-control" rows="3" placeholder="Enter Comment"></textarea>
             </div>
             <div class="form-group">
                 <label for="inputLink">Link</label>
-                <input type="text" name="link" class="form-control" placeholder="Enter Link">
+                <input type="text" name="link" id="inputLink" class="form-control" placeholder="Enter Link">
             </div>
             <div class="mt-4">
                 <button type="submit" class="btn btn-primary mr-1">Submit</button>
