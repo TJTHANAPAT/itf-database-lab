@@ -1,4 +1,4 @@
-# ITF Dabase Lab
+# ITF Database Lab
 
 This is a part of studying Information Technology Fundamentals, Academic Year of 2020, Faculty of Information Technology, KMITL.
 
