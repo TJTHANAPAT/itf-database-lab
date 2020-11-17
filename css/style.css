@@ -4,6 +4,7 @@ html, body {
 }
 body {
     background-color: #242424;
+    color: #ffffff;
 }
 body.landing {
     display: flex;
